@@ -1,0 +1,74 @@
+@charset "UTF-8";  /* 文字コードをUTF-8に指定（日本語などの文字化けを防ぐ） */
+
+* {
+  box-sizing: border-box;  /* パディングやボーダーを含めて要素のサイズを計算する */
+}
+
+body {
+  /*** 任意の色を設定 ***/
+  background-color: rgb(15, 23, 31);  /* 背景色 */
+
+  color: rgb(255, 255, 255);                /* 文字色を濃いグレーに設定（読みやすさ重視） */
+  line-height: 1.6;             /* 行間を少し広めにして読みやすくする */
+  margin: 0;                    /* デフォルトのマージンをリセット */
+  padding: 0;                   /* デフォルトのパディングをリセット */
+}
+
+.container {
+  max-width: 800px;       /* コンテンツの最大幅を800pxに制限 */
+  margin: 32px auto;      /* 上下に32pxの余白を、左右は中央揃え */
+  padding: 0 16px;        /* 左右に16pxの余白を追加（内部余白） */
+}
+
+header {
+  /*** 任意の色を設定 ***/
+  background-color: rgb(0, 79, 127);  /* 背景色 */
+  color: rgb(255, 255, 255);               /* 文字色 */
+
+  display: flex;                /* フレックスボックスで横並びにする */
+  align-items: center;          /* 垂直方向の中央揃え */
+  padding: 16px;                /* 内側の余白を16pxに設定 */
+  border-radius: 0px;          /* 角を丸くする */
+  margin-bottom: 24px;          /* 下に24pxの余白を追加（セクション間のスペース） */
+}
+
+.profile-img {
+  width: 128px;               /* 幅を128pxに設定 */
+  height: 128px;              /* 高さを128pxに設定 */
+  border-radius: 0%;         /* 丸いプロフィール画像にする */
+  object-fit: cover;          /* 画像を枠にぴったりおさめる */
+  margin-left: 16px;          /* 左に余白をつけて見やすく */
+  border: 2px solid rgb(119, 127, 135);  /* 白い縁取りを追加 */
+}
+
+.profile-name {
+  font-size: 1.5em;         /* 通常の1.5倍の大きさにする */
+  margin: 0 0 0 20px;       /* 左にだけ余白を追加して画像と分離 */
+}
+
+section {
+  background: rgb(59, 63, 67);      /* セクション背景色 */
+  border: 4px solid rgb(43, 47, 51); /* 枠線 */
+  border-radius: 0px;       /* 少し角を丸める */
+  padding: 15px;            /* 内部余白を追加 */
+  margin-top: 20px;         /* 上に余白を追加して次のセクションと区切る */
+}
+
+h2 {
+  /*** 任意の色を設定 ***/
+  color: rgb(255, 255, 255);        /* 見出し色 */
+  
+  margin-top: 0;           /* 見出しの上の余白をなくす（セクションとの密着防止） */
+}
+
+#fav-words p {
+  font-style: italic;      /* 引用部分を斜体にして強調 */
+  margin-left: 32px;
+}
+
+footer {
+  text-align: center;      /* テキストを中央揃え */
+  margin-top: 32px;        /* 上に余白を追加（コンテンツと区切る） */
+  font-size: 1em;        /* フッターの文字を少し小さめに */
+  color: rgb(191, 191, 191);           /* 薄いグレーで目立たせすぎない */
+}
